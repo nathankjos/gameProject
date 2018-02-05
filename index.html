@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style src = 'css/style.css'></style>
+    <link rel="stylesheet" href="css/style.css">
     <script src="JS/jquery-3.3.1.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- inactive Player's Name and Img -->
+    <div id ='inactivePlayer'><h1>Inactive Player: </h1>
+    <h3 class= 'health'>health: </h3>
+    <h3 class='energy'>energy: </h3>
+    </div>
+    <!-- inactive player's hand card backs with correct num of cards in hand-->
+    <div id = 'inactiveHand'>Player Hand</div>
+
+    <!-- inactive player's cards in play event listeners disabled-->
+    <h3>Inactive Squadron</h3>
+    <div id = 'inactiveSquadron'></div>
+
+    <!-- active player's cards in play p2 with in play event listeners-->
+    <h3>Current Squadron</h3>
+    <div id = 'currentSquadron'></div>
+
+    <!-- active player's hand with in hand event listeners -->
+    <h3>Current Hand</h3>
+    <div id = 'currentHand'></div>
+
+    <!-- active player's name and img -->
+    <div id = 'currentPlayer'><h1>Current Player: </h1>
+    <h3 class='health'>health: </h3>
+    <h3 class='energy'>energy: </h3>
+    </div>
+
     <script src = 'JS/main.js'></script>
 </body>
 </html>

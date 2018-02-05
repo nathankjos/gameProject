@@ -1,0 +1,12 @@
+h1, h3 {
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.health, .energy{
+    display: inline-block;
+}
+img{
+    width: 300px;
+}
