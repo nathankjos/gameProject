@@ -1,12 +1,32 @@
+body{
+    text-align: center;
+}
 h1, h3 {
     text-align: center;
 }
 h1{
     text-align: center;
 }
-.health, .energy{
-    display: inline-block;
+.health, .energy, #currentNumDeck, .numCardsInDeck, #inactiveNumDeck{
+    display: inline;
 }
 img{
     width: 300px;
+}
+#inactiveHealth {
+    color: green;
+    /* border: 1px solid darkgreen; */
+    /* border-radius: 100%; */
+}
+#inactiveSquadron, #currentSquadron{
+    height: 100px;
+}
+.stats {
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 300px;
+    display: inline-block;
+}
+::-webkit-progress-bar {
+    background-color: green;
 }

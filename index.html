@@ -11,11 +11,15 @@
 <body>
     <!-- inactive Player's Name and Img -->
     <div id ='inactivePlayer'><h1>Inactive Player: </h1>
-    <h3 class= 'health'>health: </h3>
-    <h3 class='energy'>energy: </h3>
+        <div class = 'stats'>
+            <h3 class ='numCardsInDeck'>Cards left in Deck: <h3 id='inactiveNumDeck'>0</h3></h3></br>
+            <h3 class= 'health'>Health: <progress id= 'inactiveHealth' value="100" max="100">100 / 100</progress></h3></br>
+            <h3 class='energy'>Energy: <progress id= 'inactiveEnergy' value="0" max="10"></progress></h3></br>
+        </div>
     </div>
     <!-- inactive player's hand card backs with correct num of cards in hand-->
-    <div id = 'inactiveHand'>Player Hand</div>
+    <h3>Opponent's Hand</h3>
+    <div id = 'inactiveHand'></div>
 
     <!-- inactive player's cards in play event listeners disabled-->
     <h3>Inactive Squadron</h3>
@@ -30,9 +34,12 @@
     <div id = 'currentHand'></div>
 
     <!-- active player's name and img -->
-    <div id = 'currentPlayer'><h1>Current Player: </h1>
-    <h3 class='health'>health: </h3>
-    <h3 class='energy'>energy: </h3>
+    <div id ='currentPlayer'><h1>Current Player: </h1>
+        <div class = 'stats'>
+            <h3 class ='numCardsInDeck'>Cards left in Deck: <h3 id='currentNumDeck'>0</h3></h3></br>
+            <h3 class= 'health'>Health: <progress id= 'currentHealth' value="100" max="100">100 / 100</progress></h3></br>
+            <h3 class='energy'>Energy: <progress id= 'currentEnergy' value="0" max="10"></progress></h3>
+        </div>
     </div>
 
     <script src = 'JS/main.js'></script>
