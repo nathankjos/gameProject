@@ -1,25 +1,30 @@
 body{
     text-align: center;
 }
-h1, h3 {
+h2, h3 {
     text-align: center;
-}
-h1{
-    text-align: center;
+    height: 15px;
 }
 .health, .energy, #currentNumDeck, .numCardsInDeck, #inactiveNumDeck{
     display: inline;
 }
 img{
-    height: 200px;
+    height: 170px;
+    min-width: 135px;
 }
-#inactiveHealth {
-    color: green;
-    /* border: 1px solid darkgreen; */
-    /* border-radius: 100%; */
+.sideKick.card {
+    background-color: black; 
+    background-image: url(https://media.giphy.com/media/l2Sq61oUPwh8S02ys/giphy.gif);
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 1px 2px;
+    border: 0px;
+    border-radius: 15px;
 }
 #inactiveSquadron, #currentSquadron{
-    height: 100px;
+    min-height: 75px;
 }
 .stats {
     border: 1px solid gray;
@@ -27,6 +32,27 @@ img{
     width: 300px;
     display: inline-block;
 }
-/* ::-webkit-progress-bar {
-    background-color: green;
-} */
+.card {
+    background-color: black; 
+    background-image: url(https://media.giphy.com/media/Xh1z9DwTnbVTi/source.gif);
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 1px 2px;
+    border: 0;
+    border-bottom: 3px solid gray;
+    border-left: 2px solid gray;
+    border-radius: 15px;
+}
+.rareCard {
+    background-color: black; 
+    background-image: url(https://i.pinimg.com/originals/99/5a/b3/995ab306154e9b169d1f580c287408ea.gif);
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 1px 2px;
+    border: 0px;
+    border-radius: 15px;
+}
