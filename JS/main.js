@@ -184,12 +184,20 @@ var game = {
             attPwr = 0;
             if($inactiveHealth.val() === 0){
                 alert('Game Over! Winner is: '+game.currentPlayer.name)
+                var winner = $('<h1>')
+                winner.text('Winner is: '+game.currentPlayer.name)
                 var playAgain = $('<button>')
+                playAgain.attr('id','playAgainBtn')
                 playAgain.text('Play Again?')
-                var buttons = $('#buttons')
-                buttons.empty()
-                buttons.append(playAgain)
-            }    
+                var body = $('body')
+                body.empty()
+                body.append(winner)
+                body.append(playAgain)
+            }
+            function playAgainfunction(){
+                location.reload()
+            }
+            playAgain.on('click',playAgainfunction)
         //switches health bar values
             limboHealth = $currentHealth.val();
             $currentHealth.val($inactiveHealth.val());
