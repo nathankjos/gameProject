@@ -10,8 +10,8 @@ h3 {
     display: inline;
 }
 img{
-    height: 100%;
-    size: cover;
+    height: 95%;
+    /* size: cover; */
     background-position-y: 10%;
 }
 .sideKick.card {
@@ -60,7 +60,9 @@ h2 {
     border-radius: 15px;
     overflow: hidden;
 }
-.rareCard {
+.dmgSpell {
+    height: 170px;
+    width: 135px;
     background-color: black; 
     background-image: url(https://i.pinimg.com/originals/99/5a/b3/995ab306154e9b169d1f580c287408ea.gif);
     display: inline-block;
@@ -70,6 +72,7 @@ h2 {
     margin: 1px 2px;
     border: 0px;
     border-radius: 15px;
+    overflow: hidden;
 }
 #inactiveHand{
     padding-left: 25px;

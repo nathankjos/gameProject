@@ -35,15 +35,11 @@
         return Math.floor(Math.random()*n);
     }
 var cards = [
-    {name: 'ratchet', strength: 4, health: 8, stamina: 0, pic:'Ratchet.png', cardBack: 'cardBack.png', type: 'hero', cost: 3},
-    {name: 'clank', strength: 1, health: 2, stamina: 0, pic:'Clank.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 1},
-    {name: 'jak', strength: 5, health: 10, stamina: 0, pic:'Jak.png', cardBack: 'cardBack.png',  type: 'hero', cost: 3},
-    {name: 'daxter', strength: 2, health: 1, stamina: 0, pic:'Daxter.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 1},
-    {name: 'link', strength: 6, health: 8, stamina: 0, pic: 'link.png', cardBack: 'cardBack.png', type: 'hero', cost: 4},
-    {name: 'bomb', strength: 4, pic: 'bomb.png', cardBack: 'cardBack.png', type: 'dmgSpell', cost: 2},
-    // {name: 'boost', strength: 6, pic: 'link.png', cardBack: 'cardBack.png', type: 'suppSpell', cost: 1},
-    // {name: 'skip', strength: 6, pic: 'link.png', cardBack: 'cardBack.png', type: 'specSpell', cost: 3},
-    // {name: 'heal', strength: 6, pic: 'link.png', cardBack: 'cardBack.png', type: 'suppSpell', cost: 1},
+    {name: 'ratchet', strength: 4, health: 18, stamina: 0, attacks: 1, power: 'teamBoost', pic:'Ratchet.png', cardBack: 'cardBack.png', type: 'hero', cost: 3},
+    {name: 'clank', strength: 1, health: 2, stamina: 0, attacks: 1, power: 'sideKick', pic:'Clank.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 1},
+    {name: 'jak', strength: 5, health: 16, stamina: 0, attacks: 1, power: 'rainOfFire', pic:'Jak.png', cardBack: 'cardBack.png',  type: 'hero', cost: 3},
+    {name: 'daxter', strength: 2, health: 1, stamina: 0, attacks: 1, power: 'sideKick', pic:'Daxter.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 1},
+    {name: 'link', strength: 6, health: 12, stamina: 0, attacks: 1, power: 'bomb', pic: 'link.png', cardBack: 'cardBack.png', type: 'hero', cost: 4}
 ]
 var cardsLength = cards.length;
 /////////////////////////////////////////////////
@@ -169,12 +165,6 @@ var game = {
             }
         }
     },
-    activateDmg: function(){
-        if($inactiveSquadron.length > 0){
-            //for loop repeat as long as inactive squadron is
-            //reduce inactive squadron[i] health by 4
-        }
-    },
     switchPlayer: function() {
         if(firstTurn===true){
             numTimesCanDraw = 5;
@@ -189,9 +179,12 @@ var game = {
                     lastSquadCardId= $currentSquadron.children().eq(i).attr('id')
                     var foundCard = game.findCard(lastSquadCardId)
                     attPwr += cards[foundCard].strength
-        }
+            }
             $inactiveHealth.val($inactiveHealth.val()-attPwr);
             attPwr = 0;
+            function playAgainfunction(){
+                location.reload()
+            }
             if($inactiveHealth.val() === 0){
                 alert('Game Over! Winner is: '+game.currentPlayer.name)
                 var winner = $('<h1>')
@@ -203,9 +196,6 @@ var game = {
                 body.empty()
                 body.append(winner)
                 body.append(playAgain)
-                function playAgainfunction(){
-                    location.reload()
-                }    
                 playAgain.on('click',playAgainfunction)
             }
         //switches health bar values
@@ -308,7 +298,6 @@ var game = {
             $('#AP').text(game.currentPlayer.name)    
             $('#currentHand > .hero').on("dblclick", game.deployCard)
             $('#currentHand > .sideKick').on("dblclick", game.deployCard)
-            $('#currentHand > .dmgSpell').on("dblclick", game.activateDmg)
             $('#AE').text($currentEnergy.val())
             $('#IE').text($inactiveEnergy.val())
             if(firstTurn===true){
