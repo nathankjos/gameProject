@@ -5,6 +5,7 @@
 Characters from many different video game series' have been recruited by two rivals (Player 1 and Player 2 of course), and an all-out war has begun! Do you have what it takes to win the battle of a lifetime?
 
 <img width="988" alt="screenshot" src="/GameScreenshot.png">
+
 ### To Play
 
 Each player takes turns deploying a troop card, using a bomb spell, or saving their energy for their next turn. First player to cause their opponent to lose all 50 points of health wins!

@@ -118,10 +118,10 @@ h1 {
     height: 100px;
 }
 #endTurn, #draw {
-border-radius: 15px;
-height: 40px;
-width: 150px;
-font-size: 20px;
-background-color: rgb(134, 177, 180);
-color: white;
+    border-radius: 15px;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    background-color: rgb(134, 177, 180);
+    color: white;
 }
