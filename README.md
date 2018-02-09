@@ -2,17 +2,12 @@
 
 ## A two-player, Battle-Card Game
 
-//DESCRIPTION
+Characters from many different video game series' have been recruited by two rivals (Player 1 and Player 2 of course), and an all-out war has begun! Do you have what it takes to win the battle of a lifetime?
 
-<img width="988" alt="screenshot" src="">
-//SCREENSHOT
-
-
-
-
+<img width="988" alt="screenshot" src="/GameScreenshot.png">
 ### To Play
 
-//DESCRIPTION
+Each player takes turns deploying a troop card, using a bomb spell, or saving their energy for their next turn. First player to cause their opponent to lose all 50 points of health wins!
 
 ### Technology Used
 
@@ -22,86 +17,62 @@ The game was created and styled using HTML and CSS, and the game's interactivity
 
 ### User Stories
 
-As a player, I can enter my player name for easier tracking of turns.
+As a player, I can choose to draw a card if my hand is not full and I haven't already drawn a card.
 
-As a player, I click a button to stand-in for dice-rolling, to find out what spot I will move to.
+As a player, I double click troop cards in my hand to deploy them to my active squadron.
 
-As a player, my game piece moves forward or backward depending on the action assigned to each space and the number I "rolled".
+As a player, I can use a bomb spell to attack the enemy's squadron of troops.
 
-As a player, I can play a sub game if I land on a "challenge" space, so the game is more interesting.
+As a player, I can end my turn early without using energy in order to save energy for more expensive cards.
 
 As a player, I know when I've won because it is announced clearly.
 
+As a player, I can play again once I've completed a game
+
 ### Approach
 
-First I listed a backlog in Trello (but later sort of abandoned it, which is why it's not linked here. Shouldn't have worked without a plan on some features, as I kept realizing I'd missed scenarios to account for).
+I created each part of the game in separate phases:
 
-Then I planned out my board [here](https://docs.google.com/spreadsheets/d/1omj6Uuwytwop5jVp8NGy315w4UICILinf9a8YGMPBf8/edit?usp=sharing).
+1. First I created a cards array to store just a few cards as objects     with various properties.
 
-Then I built the game in phases:
+2. Then I started adding necessary functions of my card game like         creating card decks for both players, drawing cards, deploying         cards, and ending the turn of the current player, and switching        players.
 
-1. Structure of the board using HTML and CSS.
-2. Logic for progression through the board.
-3. Logic for special squares
-4. Tic Tac Toe bonus game
-5. Grab The Screws bonus game
-6. Styling
+3. Then I created advanced game logic to make sure that all variables,    arrays, objects, and functions were behaving appropriately.
 
+4. I restructured the game in the chronological order that each           element or function would be rendered or called, and simplified the    code of various major processes for storing correct information of     what has happened in the game.
+
+5. After making sure everything was working as planned, I styled my game by adding images to the cards, card backgrounds, card backs, and the background of my game itself from these sources:
+#### Images
+- [Page Background](http://gipsypixel.com/wp-content/uploads/2017/11/Dark-Teal-Wallpaper-High-Quality-Minimalist-Subtle-Texture-Of-Computer-Green.jpg)
+- [Ratchet](http://playstationallstars.wikia.com/wiki/File:Render_ratchet_clank.png)
+- [Clank](https://psmedia.playstation.com/is/image/psmedia/ratchet-and-clank-two-column-characters-clank-01-ps4-eu-24mar16?$TwoColumn_Image$)
+- [Jak](http://playstationallstars.wikia.com/wiki/File:Jak20oc.png)
+- [Link](http://images6.fanpop.com/image/photos/38900000/Link-the-legend-of-zelda-38945796-500-487.png)
+- [Bomb](http://webiconspng.com/wp-content/uploads/2017/09/Bomb-PNG-Image-59566.png)
+- [Card Back](https://d1u5p3l4wpay3k.cloudfront.net/hearthstone_gamepedia/thumb/7/7e/Card_back-The_Blue_Portal.png/200px-Card_back-The_Blue_Portal.png?version=219337318963ee90541cb1dcc6503e71)
+- [Hero Background Image](https://giphy.com/gifs/rough-Xh1z9DwTnbVTi)
+- [Side Kick Background Image](https://giphy.com/gifs/trippy-abstract-wings-26ybuXagzIQN8hOXm)
 ### Outstanding Challenges
 
-The tic-tac-toe board and the catching challenge code needs to be refactored. This code is not DRY. But these are bonus games, so..
+I need to Implement a health system for cards, and a damage system for spells, as long with a poison status for players.
 
-When a player lands on a "challenge" space, the intention was to allow them to choose whether they want to play a one- or two-player game. I broke the code, though, and neither supplementary game is resetting correctly after the first time it's played. Until this can be figured out, this has been detoured around and commented out.
+I need to have a start page which would allow naming of players, and rolling dice to see who is first.
 
-When the challenge has already been played. I want there to be a message saying that the player doesn't have to do the challenge since it's been done. It's not working for the Grab the Screws challenge, so it's commented out.
+I need to add a delay after the end turn button is pressed to hide all screen elements for several seconds so the current player does not see the hand of the next player.
+
+I need to add more damage spells, and special spells, along with rare cards in a separate rare card array.
+
+I need to ad a drag and drop event listener to the current squadron to be able to attack inative squadron troops in order to neutralize them
 
 ### Future Work
 
-As a player, I want additional challenge games for more excitement.
+As a player, I want more cards, several card rarity arrays with special abilities on each card that activate when stamina is full and card is clicked.
 
 As a player, I want to choose my own avatar.
 
-As a player, I want my piece to "fly" to it's next spot.
+As a player, I want to have a record of wins vs losses
 
-As a player, I want additional animations.
-
-### Acknowledgements
-
-### Fonts
-- Google Fonts [[1]](https://fonts.google.com/specimen/Patrick+Hand+SC) [[2]](https://fonts.google.com/specimen/Josefin+Sans)
-
-#### Images
-- [Page Background](http://anywalls.com/pic/201305/1920x1080/anywalls.com-66430.jpg)
-- [Start Space](https://www.codecademy.com/en/forum_questions/5486150176b8fe6889000a7f)
-- [Forward Space](http://www.guoguiyan.com/data/out/209/69778101-vortex-wallpapers.jpg)
-- [Backward Space](https://img09.deviantart.net/d31b/i/2006/039/9/4/swirl_vortex_by_acidburnt.jpg)
-- [Challenge Space](https://i.ytimg.com/vi.XGPQLV2uz7k/maxresdefault.jpg)
-- [Last Space](https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17_with_transparent_background.png)
-- [Player 1 Piece](http://keywordsuggest.org/content/205800-orange-rocket-clip-art.html)
-- [Player 2 Piece](http://biezumd.com/clipart/clipart-spaceship.html) 
-- [Tic Tac Toe Challenge Background](https://i.stack.imgur.com/aa8Dw.jpg)
-- [Tic Tac Toe Challenge Player 2 Piece](https://pbs.twimg.com/profile_images/3627005607/2aae0e25c02fe03e8b22437d69d6802c_400x400.png)
-- [Grab Challenge Piece](https://images-na.ssl-images-amazon.com/images/I/71NUDOyznBL._SL1497_.jpg)
-- [Winner Gif](https://lh5.googleusercontent.com/-mvpIxrtlkAA/Tndmi1sf6zI/AAAAAAAAD1E/I2vwpRqn1z8/s500/FlyEarth500_Micael_Reynaud.gif)
+As a player, I want everything to be animated
 
 
-
-#### Sounds
-[[1]](http://soundbible.com/472-Laser-Blasts.html)
-[[2]](http://soundbible.com/1636-Power-Up-Ray.html)
-[[3]](http://soundbible.com/1610-Power-Failure.html)
-[[4]](http://soundbible.com/1639-Power-Up.html)
-[[5]](http://soundbible.com/1769-Laser-Gun.html)
-[[7]](http://soundbible.com/1919-Shotgun-Blast.html)
-[[8]](http://soundbible.com/1807-Explosion-Ultra-Bass.html)
-[[9]](http://soundbible.com/1141-Comet.html)
-[[10]](http://soundbible.com/182-Shake-And-Roll-Dice.html)
-[[11]](http://soundbible.com/1004-Frying-Pan-Hit.html)
-[[12]](http://soundbible.com/1522-Balloon-Popping.html)
-[[13]](http://soundbible.com/308-Large-Thump-Or-Bump.html)
-
-All images and sounds are borrowed without permission.
-
-### Note
-
-This game is by no means scientifically accurate. Obviously.
+All images are borrowed without permission.
