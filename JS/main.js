@@ -43,6 +43,8 @@ var cards = [
     {name: 'jak', strength: 5, health: 10, stamina: 0, pic:'Jak.png', cardBack: 'cardBack.png',  type: 'hero', cost: 4},
     {name: 'daxter', strength: 2, health: 1, stamina: 0, pic:'Daxter.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 2},
     {name: 'daxter', strength: 2, health: 1, stamina: 0, pic:'Daxter.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 2},
+    {name: 'greenSage', strength: 3, health: 3, stamina: 0, pic:'Green Sage.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 2},
+    {name: 'greenSage', strength: 3, health: 3, stamina: 0, pic:'Green Sage.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 2},
     {name: 'link', strength: 6, health: 8, stamina: 0, pic: 'link.png', cardBack: 'cardBack.png', type: 'hero', cost: 5},
     {name: 'link', strength: 6, health: 8, stamina: 0, pic: 'link.png', cardBack: 'cardBack.png', type: 'hero', cost: 5},
     {name: 'bomb', pic: 'bomb.png', cardBack: 'cardBack.png', type: 'dmgSpell', cost: 4},

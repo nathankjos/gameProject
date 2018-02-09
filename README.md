@@ -9,6 +9,13 @@ Characters from many different video game series' have been recruited by two riv
 
 Each player takes turns deploying a troop card, using a bomb spell, or saving their energy for their next turn. First player to cause their opponent to lose all 50 points of health wins!
 
+Ratchet: Cost: 3, Strength: 4
+Clank: Cost 1, Strength: 1
+Jak: Cost 4, Strength: 5
+Daxter: Cost: 2, Strength: 2
+Green Sage: Cost 2, Strength: 3
+Bomb: Cost: 4, eliminates enemy squadron
+
 ### Technology Used
 
 HMTL, CSS, JavaScript, jQuery
@@ -47,6 +54,7 @@ I created each part of the game in separate phases:
 - [Ratchet](http://playstationallstars.wikia.com/wiki/File:Render_ratchet_clank.png)
 - [Clank](https://psmedia.playstation.com/is/image/psmedia/ratchet-and-clank-two-column-characters-clank-01-ps4-eu-24mar16?$TwoColumn_Image$)
 - [Jak](http://playstationallstars.wikia.com/wiki/File:Jak20oc.png)
+- [GreenSage](https://vignette.wikia.nocookie.net/jakanddaxter/images/1/12/Samos_Hagai_concept_art.png/revision/latest?cb=20100614174532)
 - [Link](http://images6.fanpop.com/image/photos/38900000/Link-the-legend-of-zelda-38945796-500-487.png)
 - [Bomb](http://webiconspng.com/wp-content/uploads/2017/09/Bomb-PNG-Image-59566.png)
 - [Card Back](https://d1u5p3l4wpay3k.cloudfront.net/hearthstone_gamepedia/thumb/7/7e/Card_back-The_Blue_Portal.png/200px-Card_back-The_Blue_Portal.png?version=219337318963ee90541cb1dcc6503e71)
