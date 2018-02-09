@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    color: rgb(156, 214, 224);
 }
 h2, h3 {
     text-align: center;
@@ -9,8 +10,9 @@ h2, h3 {
     display: inline;
 }
 img{
-    height: 170px;
-    min-width: 135px;
+    height: 100%;
+    size: cover;
+    background-position-y: 10%;
 }
 .sideKick.card {
     background-color: black; 
@@ -31,19 +33,29 @@ img{
     border-radius: 10px;
     width: 300px;
     display: inline-block;
+    background-color: rgba(128, 128, 128, 0.308);
 }
-.card {
-    background-color: black; 
+.hero {
     background-image: url(https://media.giphy.com/media/Xh1z9DwTnbVTi/source.gif);
+}
+.sideKick {
+    background-image: url(https://media.giphy.com/media/26ybuXagzIQN8hOXm/source.gif)
+}
+.card, .sideKick, .hero {
+    height: 170px;
+    width: 135px;
+    background-color: black; 
+    /* background-image: url(https://media.giphy.com/media/Xh1z9DwTnbVTi/source.gif); */
     display: inline-block;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: 1px 2px;
     border: 0;
-    border-bottom: 3px solid gray;
-    border-left: 2px solid gray;
+    /* border-bottom: 2px solid gray;
+    border-left: 3px solid gray; */
     border-radius: 15px;
+    overflow: hidden;
 }
 .rareCard {
     background-color: black; 
@@ -57,5 +69,31 @@ img{
     border-radius: 15px;
 }
 #inactiveHand{
-    padding-left: 100px;
+    padding-left: 25px;
+    height: 100px;
 }
+body {
+    background-image: url(http://gipsypixel.com/wp-content/uploads/2017/11/Dark-Teal-Wallpaper-High-Quality-Minimalist-Subtle-Texture-Of-Computer-Green.jpg);
+}
+progress[value]{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+   }
+   
+   progress[value]::-webkit-progress-value {
+    background-color: lightcoral;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+   }
+   
+   progress[value]::-webkit-progress-bar {
+    background-color: grey;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+   }
+.healthBar[value]::-webkit-progress-value {
+    background-color: lightgreen;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+   }
