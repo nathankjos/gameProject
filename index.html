@@ -11,17 +11,17 @@
 <body>
     
     <!-- inactive Player's Name and Img -->
-    <div id ='inactivePlayer'><h2>Inactive Player: </h2></div>
+    <div id ='inactivePlayer'><h2>Inactive Player: <span id='IP'></span></h2></div>
         <div class = 'stats'>
             <h3 class ='numCardsInDeck'>Cards left in Deck: <h3 id='inactiveNumDeck'>0</h3></h3></br>
-            <h3 class= 'health'>Health: <progress class='healthBar'id= 'inactiveHealth' value="20" max="20">20/20</progress></h3></br>
-            <h3 class='energy'>Energy: <progress class='energyBar'id= 'inactiveEnergy' value="0" max="10"></progress></h3></br>
-        </div>
+            <h3 class= 'health'>Health: <span id='IHP'>30</span>/30<progress class='healthBar'id= 'inactiveHealth' value="30" max="30">20/20</progress></h3></br>
+            <h3 class='energy'>Energy: <span id='IE'>0</span>/10<progress class='energyBar'id= 'inactiveEnergy' value="0" max="10"></progress></h3></br>
+        </div></br>
+        </br>
+        </br>
         <!-- inactive player's hand card backs with correct num of cards in hand-->
         <h3>Opponent's Hand</h3>
         <div id = 'inactiveHand'></div>
-    
-
     <!-- inactive player's cards in play event listeners disabled-->
     <h3>Inactive Squadron</h3>
     <div id = 'inactiveSquadron'></div>
@@ -30,15 +30,17 @@
     <h3>Current Squadron</h3>
     <div id = 'currentSquadron'></div>
 
-
+<div id = 'buttons'><button id='draw'>Draw Card</button> <button id='endTurn'>End Turn</button></div>
     <!-- active player's name and img -->
-    <div id ='currentPlayer'><h2>Current Player: </h2>
+    <div id ='currentPlayer'><h2>Current Player: <span id='AP'></span></h2>
         <div class = 'stats'>
             <h3 class ='numCardsInDeck'>Cards left in Deck: <h3 id='currentNumDeck'>0</h3></h3></br>
-            <h3 class= 'health'>Health: <progress class='healthBar'id= 'currentHealth' value="20" max="20">100 / 100</progress></h3></br>
-            <h3 class='energy'>Energy: <progress class='energyBar'id= 'currentEnergy' value="0" max="10"></progress></h3>
+            <h3 class= 'health'>Health: <span id='AHP'>30</span>/30<progress class='healthBar'id= 'currentHealth' value="30" max="30">100 / 100</progress></h3></br>
+            <h3 class='energy'>Energy: <span id='AE'>0</span>/10<progress class='energyBar'id= 'currentEnergy' value="0" max="10"></progress></h3>
         </div>
-    </div>
+    </div></br>
+</br>
+</br>
     <!-- active player's hand with in hand event listeners -->
     <h3>Current Hand</h3>
     <div id = 'currentHand'></div>
