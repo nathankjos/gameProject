@@ -36,11 +36,16 @@
     }
 var cards = [
     {name: 'ratchet', strength: 4, health: 8, stamina: 0, pic:'Ratchet.png', cardBack: 'cardBack.png', type: 'hero', cost: 3},
+    {name: 'ratchet', strength: 4, health: 8, stamina: 0, pic:'Ratchet.png', cardBack: 'cardBack.png', type: 'hero', cost: 3},
     {name: 'clank', strength: 1, health: 2, stamina: 0, pic:'Clank.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 1},
-    {name: 'jak', strength: 5, health: 10, stamina: 0, pic:'Jak.png', cardBack: 'cardBack.png',  type: 'hero', cost: 3},
-    {name: 'daxter', strength: 2, health: 1, stamina: 0, pic:'Daxter.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 1},
-    {name: 'link', strength: 6, health: 8, stamina: 0, pic: 'link.png', cardBack: 'cardBack.png', type: 'hero', cost: 4},
-    {name: 'bomb', strength: 4, pic: 'bomb.png', cardBack: 'cardBack.png', type: 'dmgSpell', cost: 2},
+    {name: 'clank', strength: 1, health: 2, stamina: 0, pic:'Clank.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 1},
+    {name: 'jak', strength: 5, health: 10, stamina: 0, pic:'Jak.png', cardBack: 'cardBack.png',  type: 'hero', cost: 4},
+    {name: 'jak', strength: 5, health: 10, stamina: 0, pic:'Jak.png', cardBack: 'cardBack.png',  type: 'hero', cost: 4},
+    {name: 'daxter', strength: 2, health: 1, stamina: 0, pic:'Daxter.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 2},
+    {name: 'daxter', strength: 2, health: 1, stamina: 0, pic:'Daxter.png', cardBack: 'cardBack.png', type: 'sideKick', cost: 2},
+    {name: 'link', strength: 6, health: 8, stamina: 0, pic: 'link.png', cardBack: 'cardBack.png', type: 'hero', cost: 5},
+    {name: 'link', strength: 6, health: 8, stamina: 0, pic: 'link.png', cardBack: 'cardBack.png', type: 'hero', cost: 5},
+    {name: 'bomb', pic: 'bomb.png', cardBack: 'cardBack.png', type: 'dmgSpell', cost: 4},
     // {name: 'boost', strength: 6, pic: 'link.png', cardBack: 'cardBack.png', type: 'suppSpell', cost: 1},
     // {name: 'skip', strength: 6, pic: 'link.png', cardBack: 'cardBack.png', type: 'specSpell', cost: 3},
     // {name: 'heal', strength: 6, pic: 'link.png', cardBack: 'cardBack.png', type: 'suppSpell', cost: 1},
@@ -70,7 +75,7 @@ var game = {
         currentDeck = game.players[0].deck
         inactiveDeck = game.players[1].deck
         firstTurn = true;
-        $currentEnergy.val(2)
+        $currentEnergy.val(3)
         $inactiveEnergy.val(0)
         $('#AE').text($currentEnergy.val())
         $('#IE').text($inactiveEnergy.val())
@@ -121,7 +126,7 @@ var game = {
             var thisIndex = $this.index()
             currentHand.splice(thisIndex,1)
             $currentSquadron.append(this)
-            $currentEnergy.val($currentEnergy.val()-(cards[cardIndex].cost));
+            var energyLeft = $currentEnergy.val($currentEnergy.val()-(cards[cardIndex].cost));
             $('#AE').text($currentEnergy.val())
         }
     },
@@ -170,10 +175,12 @@ var game = {
         }
     },
     activateDmg: function(){
-        if($inactiveSquadron.length > 0){
-            //for loop repeat as long as inactive squadron is
-            //reduce inactive squadron[i] health by 4
+        if($inactiveSquadron.length > 0&&$currentEnergy.val()>=4){
+            $inactiveSquadron.empty()
+            this.remove()
         }
+        var energyLeft = $currentEnergy.val($currentEnergy.val()-4);
+        $('#AE').text($currentEnergy.val())
     },
     switchPlayer: function() {
         if(firstTurn===true){
@@ -218,7 +225,7 @@ var game = {
             limboEnergy = $currentEnergy.val();
             $currentEnergy.val($inactiveEnergy.val());
             $inactiveEnergy.val(limboEnergy);
-            $currentEnergy.val($currentEnergy.val()+2)
+            $currentEnergy.val($currentEnergy.val()+3)
             $('#AE').text($currentEnergy.val())
             $('#IE').text($inactiveEnergy.val())
         //updates numTimesCanDraw

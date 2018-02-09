@@ -87,7 +87,7 @@ progress[value]{
    }
    
    progress[value]::-webkit-progress-value {
-    background-color: lightcoral;
+    background-color: rgb(255, 200, 97);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
    }
@@ -107,4 +107,21 @@ progress[value]{
 }
 body {
     min-width: 590px;
+}
+h1 {
+    height:200px;
+    font-size: 100px;
+}
+#playAgainBtn{
+    font-size: 40px;
+    width: 150px;
+    height: 100px;
+}
+#endTurn, #draw {
+border-radius: 15px;
+height: 40px;
+width: 150px;
+font-size: 20px;
+background-color: rgb(134, 177, 180);
+color: white;
 }
